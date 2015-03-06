@@ -45,3 +45,7 @@
     type: count
     drill_fields: [customer_name]
 
+  - measure: sum_total_spent
+    type: sum
+    sql: ${total_spent}
+    drill_fields: [pretty_url]
