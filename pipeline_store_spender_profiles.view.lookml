@@ -2,6 +2,10 @@
   sql_table_name: public.pipeline_store_spender_profiles
   fields:
 
+  - dimension: spender_id
+    primary_key: true
+    sql: ${TABLE}.spender_id
+
   - dimension: average_spend
     type: number
     sql: ${TABLE}.average_spend
@@ -29,9 +33,6 @@
 
   - dimension: pretty_url
     sql: ${TABLE}.pretty_url
-
-  - dimension: spender_id
-    sql: ${TABLE}.spender_id
 
   - dimension: total_spent
     type: number
