@@ -2,6 +2,11 @@
   sql_table_name: public.dm_ticket
   fields:
 
+  - dimension: ticket_id
+    primary_key: true
+    type: int
+    sql: ${TABLE}.ticket_id
+
   - dimension_group: close
     type: time
     timeframes: [time, date, week, month]
@@ -42,10 +47,6 @@
   - dimension: tax
     type: number
     sql: ${TABLE}.tax
-
-  - dimension: ticket_id
-    type: int
-    sql: ${TABLE}.ticket_id
 
   - dimension: tip
     type: number
