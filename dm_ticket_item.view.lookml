@@ -35,8 +35,17 @@
   - dimension: unit_price
     type: number
     sql: ${TABLE}.unit_price
+    
+  - dimension: ticket_item_subtotal
+    type: number
+    sql: ${TABLE}.unit_price * ${TABLE}.quantity
 
   - measure: count
     type: count
     drill_fields: [item_name]
+    
+  - measure: sum_item_subtotal
+    type: sum
+    sql: ${ticket_item_subtotal}
+    drill_fields: [pretty_url]
 
