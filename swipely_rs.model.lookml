@@ -18,6 +18,9 @@
 - explore: pipeline_store_spender_profiles
 
 - explore: real_time_spends
+  joins:
+    - join:  pipeline_store_spender_profiles
+      foreign_key: spender_id
 
 - explore: spender_cards
 
