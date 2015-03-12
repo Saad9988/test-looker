@@ -34,4 +34,7 @@
       foreign_key: pretty_url
 
 - explore: dm_ticket_item
+  joins:
+    - join: dm_ticket
+      foreign_key: ticket_id
 
