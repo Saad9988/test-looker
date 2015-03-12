@@ -26,3 +26,12 @@
 
 - explore: spender_profiles
 
+- explore: dm_ticket
+  joins:
+    - join:  dm_ticket_item
+      foreign_key: ticket_id
+      foreign_key: store_day
+      foreign_key: pretty_url
+
+- explore: dm_ticket_item
+
