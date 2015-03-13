@@ -27,11 +27,9 @@
 - explore: spender_profiles
 
 - explore: dm_ticket
-  joins:
-    - join:  dm_ticket_item
-      foreign_key: ticket_id
-      foreign_key: store_day
-      foreign_key: pretty_url
 
 - explore: dm_ticket_item
+  joins:
+    - join: dm_ticket
+    - sql_on: ${dm_ticket_item.ticket_id} = ${dm_ticket.ticket_id} AND ${dm_ticket_item.PRETTY_URL} = ${dm_ticket.PRETTY_URL} AND ${dm_ticket_item.STORE_DAY} = ${dm_ticket.STORE_DAY}
 

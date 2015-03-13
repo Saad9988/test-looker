@@ -54,4 +54,10 @@
   - measure: count
     type: count
     drill_fields: []
+    
+  - measure: sum_gross_sales
+    type: sum
+    sql: ${gross_sales}
+    drill_fields: [pretty_url]
+    
 
