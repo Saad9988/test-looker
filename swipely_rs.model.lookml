@@ -27,6 +27,10 @@
 - explore: spender_profiles
 
 - explore: dm_ticket
+  joins:
+    - join: dm_ticket_employee
+      sql_on: ${dm_ticket_employee.ticket_id} = ${dm_ticket.ticket_id} AND ${dm_ticket_employee.pretty_url} = ${dm_ticket.pretty_url} AND ${dm_ticket_employee.store_day_raw} = ${dm_ticket.store_day_raw}
+
 
 - explore: dm_ticket_item
   joins:
