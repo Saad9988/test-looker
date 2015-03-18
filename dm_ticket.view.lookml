@@ -64,6 +64,11 @@
   - measure: sum_gross_sales
     type: sum
     sql: ${gross_sales}
-    drill_fields: [pretty_url]
+    drill_fields: [pretty_url, ticket_id]
+    
+  - measure: sum_covers
+    type: sum
+    sql: ${covers}
+    drill_fields: [pretty_url, ticket_id]
     
 
