@@ -31,5 +31,5 @@
 - explore: dm_ticket_item
   joins:
     - join: dm_ticket
-    - sql_on: ${dm_ticket_item.ticket_id} = ${dm_ticket.ticket_id} AND ${dm_ticket_item.PRETTY_URL} = ${dm_ticket.PRETTY_URL} AND ${dm_ticket_item.STORE_DAY} = ${dm_ticket.STORE_DAY}
+      sql_on: ${dm_ticket_item.ticket_id} = ${dm_ticket.ticket_id} AND ${dm_ticket_item.pretty_url} = ${dm_ticket.pretty_url} AND ${dm_ticket_item.store_day_raw} = ${dm_ticket.store_day_raw}
 

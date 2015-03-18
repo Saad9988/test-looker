@@ -25,6 +25,11 @@
     convert_tz: false
     sql: ${TABLE}.store_day
 
+  - dimension: store_day_raw
+    hidden: true
+    type: string
+    sql: ${TABLE}.store_day
+
   - dimension: subcategory
     sql: ${TABLE}.subcategory
 
